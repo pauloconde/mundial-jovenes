@@ -21,12 +21,12 @@ async function getAppBackgroundColor() {
     const rawData = await fs.readFile(SPONSOR_JSON_PATH, 'utf-8');
     const sponsorInfo = JSON.parse(rawData);
     
-    if (sponsorInfo?.colors?.appBg) {
-      console.log(`🎨 Color detectado desde sponsor.json: ${sponsorInfo.colors.appBg}`);
-      return sponsorInfo.colors.appBg;
+    if (sponsorInfo?.colors?.appIconsBg) {
+      console.log(`🎨 Color detectado desde sponsor.json: ${sponsorInfo.colors.appIconsBg}`);
+      return sponsorInfo.colors.appIconsBg;
     }
     
-    console.warn(`⚠️ No se encontró "colors.appBg" en el JSON. Usando fallback: ${DEFAULT_FALLBACK_COLOR}`);
+    console.warn(`⚠️ No se encontró "colors.appIconsBg" en el JSON. Usando fallback: ${DEFAULT_FALLBACK_COLOR}`);
     return DEFAULT_FALLBACK_COLOR;
   } catch (error) {
     console.warn(`⚠️ No se pudo leer sponsor.json (${error.message}). Usando fallback: ${DEFAULT_FALLBACK_COLOR}`);

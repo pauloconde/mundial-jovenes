@@ -22,7 +22,7 @@ export default defineConfig({
         short_name: sponsorInfo.seo.defaultTitle,
         description: sponsorInfo.seo.description,
         theme_color: sponsorInfo.colors.appBg,
-        background_color: sponsorInfo.colors.appBg,
+        background_color: sponsorInfo.colors.appIconsBg,
         display: 'standalone',
         start_url: '/',
         icons: [
